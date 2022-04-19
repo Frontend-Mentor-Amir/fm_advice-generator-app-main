@@ -1,0 +1,74 @@
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+  background-color: var(--dark-blue);
+  font-family: "League Spartan", sans-serif;
+  font-family: "Manrope", sans-serif;
+  letter-spacing: 2px;
+}
+
+.adviceDiv {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: var(--grayish-blue);
+  padding: 3rem;
+  border-radius: 25px;
+  display: grid;
+  justify-items: center;
+}
+
+.header {
+  color: var(--neon-green);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.advice {
+  color: var(--light-cyan);
+  quotes: "“" "”" "‘" "’";
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.advice::before {
+  content: open-quote;
+}
+.advice::after {
+  content: close-quote;
+}
+
+.divider {
+  padding: 20px;
+  color: white;
+}
+
+.diceWrapper {
+  background-color: var(--neon-green);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -30px;
+  box-shadow: none;
+  transition: 0.2s;
+}
+
+.diceWrapper:hover {
+  cursor: pointer;
+  box-shadow: -1px 1px 27px 9px rgba(82, 255, 168, 1);
+  -webkit-box-shadow: -1px 1px 27px 9px rgba(82, 255, 168, 1);
+  -moz-box-shadow: -1px 1px 27px 9px rgba(82, 255, 168, 1);
+}
